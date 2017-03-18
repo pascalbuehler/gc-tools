@@ -1,0 +1,24 @@
+<?php include('partials/header.phtml'); ?>
+
+        <div class="container">
+            <div class="row">
+<?php $i = 0; ?>
+<?php foreach($config['tools'] as $toolName => $toolConfig): ?>
+                <div class="col-md-6">
+                    <div class="well">
+                        <h2 class="text-primary nomargin-top"><?= $toolName ?> <small>by <?= $toolConfig['author'] ?></small></h2>
+                        <p><?= $toolConfig['description'] ?></p>
+                        <a role="button" class="btn btn-warning" href="/<?= $toolConfig['route'] ?>">run</a>
+                    </div>
+                </div>
+<?php if($i>0 && $i%2==1): ?>
+            </div>
+            <div class="row">
+<?php endif; ?>
+<?php $i++; ?>
+<?php endforeach; ?>
+            </div>
+        </div>
+
+<?php include('partials/footer.phtml'); ?>
+

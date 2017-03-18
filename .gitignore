@@ -1,0 +1,5 @@
+/config/*
+!/config/dist.php
+!/config/tools.php
+.htaccess
+web.config
