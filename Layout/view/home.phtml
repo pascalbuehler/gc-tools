@@ -4,6 +4,7 @@
             <div class="row">
 <?php $i = 0; ?>
 <?php foreach($config['tools'] as $toolName => $toolConfig): ?>
+<?php if($toolConfig['active']!==true) { continue; } ?>
                 <div class="col-md-6">
                     <div class="well">
                         <h2 class="text-primary nomargin-top"><?= $toolName ?> <small>by <?= $toolConfig['author'] ?></small></h2>
